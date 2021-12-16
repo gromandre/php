@@ -5,7 +5,7 @@ $result1 = [
         "email" => "author@ya.ru"
     ],
     "book" => [
-        "titleBook" => '"Первая"', 
+        "titleBook" => 'Первая', 
         "emailAuthor" => "author@ya.ru"
     ],
 ];

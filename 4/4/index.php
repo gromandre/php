@@ -12,11 +12,11 @@ $result2 = [
     ],
     'books' => [
         [
-            'titleBook' => '"Первая"', 
+            'titleBook' => 'Первая', 
             'emailAuthor' => 'author@ya.ru'
         ],
         [
-            'titleBook' => '"Вторая"', 
+            'titleBook' => 'Вторая', 
             'emailAuthor' => 'author@ya.ru'
         ]
     ]
