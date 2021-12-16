@@ -29,6 +29,6 @@ $emailAutor1 = $result2['authors'][0]['email'];
 $nameAuthorAutor2 = $result2['authors'][0]['nameAuthor'];
 $emailAutor2 = $result2['authors'][1]['email'];
 
-var_dump('В нашей библиотеке точно есть две книги, которые вы ищете: ' . $nameAuthorBook1.' и ' . $nameAuthorBook2);
+var_dump('В нашей библиотеке точно есть две книги, которые вы ищете: ' . '"' . $nameAuthorBook1. '"' . ' и ' . '"' . $nameAuthorBook2 . '"');
 var_dump('Пожалуйста, перестаньте писать гневные письма на адрес нашего любимого автора ' . $result2['authors'][0]['nameAuthor'] . ' (' . $emailAutor1 . '). Пишите их лучше другому нашему автору — ' . $nameAuthorAutor2 . ' (' . $emailAutor2 . ').');
 
