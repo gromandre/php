@@ -9,7 +9,7 @@
         $boringToys = [];
         $rundomNumber = rand(1, 10);
 
-        for($i=1; $i <= $rundomNumber; $i++){
+        for ($i=1; $i <= $rundomNumber; $i++) {
             $randomPrice = rand(100, 1000);
 
             $boringToys[] = [
@@ -48,7 +48,7 @@
         // 2. Посчитайте и выведите стоимость стоимость всех машин
         $priceCars = [];
 
-        foreach($cars as $value){
+        foreach ($cars as $value) {
             $priceCars[] = $value['price'];
         }
 
@@ -70,9 +70,9 @@
         $countColors = count($colors);
         $maxIndexColors = $countColors - 1;
     
-        foreach($cars as &$value){
+        foreach ($cars as &$value) {
             
-            for($i=0; $i<3; $i++){
+            for ($i=0; $i<3; $i++) {
 
                 $index = rand(0, $maxIndexColors);
 
@@ -81,10 +81,9 @@
                     'price' => rand(0, 100)  
                 ];  
 
-            };
+            }
             
-            
-        };
+        }
         
         var_dump($cars);
 
