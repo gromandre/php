@@ -73,7 +73,7 @@ $aSummLegs = $b + $c;
 $bSummLegs = $a + $c;
 $cSummLegs = $a + $b;
 
-if (($a < $aSummLegs) && ($b < $bSummLegs) && ($c < $cSummLegs)){
+if (($a < $aSummLegs) && ($b < $bSummLegs) && ($c < $cSummLegs)) {
     var_dump('Треугольник со сторонами $a $b $c существует');
 } else {
     var_dump('Невозможно создать треугольник со сторонами $a $b $c');
@@ -86,7 +86,7 @@ if (($a < $aSummLegs) && ($b < $bSummLegs) && ($c < $cSummLegs)){
 
 $dayNumber = rand(1, 7);
 
-if ($dayNumber == 1 || $dayNumber == 7){
+if ($dayNumber == 1 || $dayNumber == 7) {
     var_dump('Выходной день');
 } else {
     var_dump('Будний день');
