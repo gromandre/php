@@ -100,7 +100,7 @@
             $nameCar = $value['name'];
             $priceCar = $value['price'];
             
-            foreach ($value['colors'] as &$val) {
+            foreach ($value['colors'] as $val) {
 
                 $colorCar = $val['color'];
                 $priceColor = $val['price'];
