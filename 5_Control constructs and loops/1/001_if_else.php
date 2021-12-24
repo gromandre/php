@@ -8,7 +8,7 @@
 $value = rand(1, 10);
 var_dump($value);
 
-if($value > 5){
+if ($value > 5) {
     var_dump('Полученное число $value больше 5');
 }
 
@@ -21,9 +21,9 @@ if($value > 5){
 $timeToLearn = rand(0, 1);
 var_dump($timeToLearn);
 
-if($timeToLearn == true){
+if ($timeToLearn == true) {
     var_dump('Я как раз сейчас и учусь');
-}else{
+} else {
     var_dump('Что значит еще не время? Нет, для учебы всегда есть время');
 }
 
@@ -38,11 +38,11 @@ if($timeToLearn == true){
 $hour = rand(0, 23);
 var_dump($hour);
 
-if($hour >= 0 && $hour < 8){
+if ($hour >= 0 && $hour < 8) {
    var_dump('В это время нужно спать'); 
-}elseif ($hour >= 8 && $hour < 21) {
+} elseif ($hour >= 8 && $hour < 21) {
     var_dump('В это время занимайтесь полезными делами, или поспите после обеда');
-}else{
+} else {
     var_dump('Самое время готовиться ко сну');
 }
 
@@ -53,7 +53,7 @@ if($hour >= 0 && $hour < 8){
 
 const HOURS_IN_DAY = 23;
 
-if(HOURS_IN_DAY != 24){
+if (HOURS_IN_DAY != 24) {
     var_dump('Неужели я не знаю что в сутках 24 часа?');
 }
 
@@ -73,11 +73,11 @@ $aSummLegs = $b + $c;
 $bSummLegs = $a + $c;
 $cSummLegs = $a + $b;
 
-if(($a < $aSummLegs) && ($b < $bSummLegs) && ($c < $cSummLegs)){
+if (($a < $aSummLegs) && ($b < $bSummLegs) && ($c < $cSummLegs)){
     var_dump('Треугольник со сторонами $a $b $c существует');
-}else{
+} else {
     var_dump('Невозможно создать треугольник со сторонами $a $b $c');
-};
+}
 
 
 // 6. Создайте переменную $dayNumber, содержащую номер дня недели, поместите в нее случайное значение от 1 до 7
@@ -86,8 +86,8 @@ if(($a < $aSummLegs) && ($b < $bSummLegs) && ($c < $cSummLegs)){
 
 $dayNumber = rand(1, 7);
 
-if($dayNumber == 1 || $dayNumber == 7){
+if ($dayNumber == 1 || $dayNumber == 7){
     var_dump('Выходной день');
-}else{
+} else {
     var_dump('Будний день');
-};
+}

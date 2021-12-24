@@ -9,7 +9,7 @@
 
 $errorCode = rand(1, 3);
 
-switch($errorCode){
+switch ($errorCode) {
     case 1:
         var_dump('Что-то пошло не так');
         break;
@@ -31,8 +31,8 @@ switch($errorCode){
 $myNumber = rand(0, 10);
 var_dump($myNumber);
 
-switch($myNumber){
-    case $myNumber%2 == 0:
+switch ($myNumber) {
+    case $myNumber % 2 == 0:
         var_dump('Четный. Ты с нами!');
         break;
         

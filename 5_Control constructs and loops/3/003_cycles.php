@@ -28,7 +28,7 @@
     <?php
         $items = [];
 
-        for($i = 0; $i <= 10; $i++){
+        for($i = 0; $i <= 10; $i++) {
             $rundomNumber = rand(0, 9);
             array_push($items, $rundomNumber);
         };
@@ -45,10 +45,10 @@
     <?php
         $numbers = [];
 
-        for($i = 0; array_sum($numbers) < 100; $i++){
+        for ($i = 0; array_sum($numbers) < 100; $i++) {
             $rundomNumber = rand(1, 9);
             array_push($numbers, $rundomNumber);
-        };
+        }
 
         var_dump($numbers);
 
@@ -67,7 +67,7 @@
         $odds = [];
 
         foreach ($numbers as $value) {
-            if($value % 2 == 0) {
+            if ($value % 2 == 0) {
                 $even[] = $value;
             } else {
                 $odds[] = $value;

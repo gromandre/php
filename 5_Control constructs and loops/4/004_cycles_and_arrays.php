@@ -96,12 +96,12 @@
         // 'Купите автомобиль {} цвета {} всего за: {} руб'
         // вместо {} поставьте соответственно: название автомобиля, цвет, стоимость в этом цвете.
 
-        foreach($cars as &$value){
+        foreach ($cars as &$value) {
 
             $nameCar = $value['name'];
             $priceCar = $value['price'];
             
-            foreach($value['colors'] as &$val){
+            foreach ($value['colors'] as &$val) {
 
                 $colorCar = $val['color'];
                 $priceColor = $val['price'];

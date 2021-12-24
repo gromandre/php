@@ -34,22 +34,21 @@
         Теперь, зная email автора, мы сможем без перебора массива с авторами получить нужного автора книги, последовательно указав несколько индексов */
         //Добавьте каждому автору новое поле — «Год рождения».
 
-        foreach($library['authors'] as $key => $val){
+        foreach ($library['authors'] as $key => $val) {
             $newKey = $val['email'];
             $library['authors'][$newKey] = $val;
             $library['authors'][$newKey] += ['year of birth'=> rand(1970, 1990)];
             
             unset($library['authors'][$key]);
-        };
+        }
 
 
         //Добавьте каждой книге новое поле — «Дата публикации».
-        foreach($library['books'] as $key => $val){
+        foreach ($library['books'] as $key => $val) {
             $timestamp = rand( strtotime("Jan 01 2000"), strtotime("Dec 31 2020") );
             $random_Date = date("d.m.Y", $timestamp );
             $library['books'][$key] += ['publication date' => $random_Date];
-        
-        };
+        }
 
         
         //Добавьте ещё одного автора в массив авторов и ещё одну книгу, которую написал этот автор, в массив книг.
@@ -71,7 +70,7 @@
         
         //Выведите информацию по всем книгам в формате: Книга <Название книги>, её написал <ФИО автора> <Год рождения автора> (<email автора>).
 
-        foreach($library['books'] as $key => $val){
+        foreach ($library['books'] as $key => $val) {
 
             $titleBook = $val['title'];
 
@@ -85,7 +84,7 @@
             
         }
 
-        print_r( $library);
+        print_r($library);
 
     ?>
 </pre>
