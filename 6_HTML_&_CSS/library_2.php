@@ -74,8 +74,6 @@
         .book:nth-child(odd) {
             background-color: #dddddd;
         }
-
-
     </style>
 </head>
 <body>
@@ -90,8 +88,7 @@
     }
     ?>
         <p class="book">Книга <span class="nameBook"><?= $titleBook ?></span>, её написал <?= $nameAutor . ' ' . $yearOfBirthAutor ?> (<a href="<?= $emailAutors ?>"><?= $emailAutors ?></a>)</p>
-    <?php endforeach; ?>
-        
+    <?php endforeach; ?>      
 </body>
 </html>
 
