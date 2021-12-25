@@ -46,11 +46,6 @@
 
     //Реализуйте условие: если переменная $red истинна, необходимо к заголовку H1 добавить атрибут class="red", чтобы он выводился красным цветом.
     $red = (bool) rand(0, 1);
-
-    /* if ($red == true) {
-
-    } */
-
 ?>
 
 <!doctype html>
@@ -58,25 +53,45 @@
 <head>
     <meta charset="UTF-8">
     <title><?php echo($title) ?></title>
-    <style type="text/css">.red {color: red;}</style>
+    <style type="text/css">
+        body {
+            margin: 0 40px;
+        }
+        
+        .red {
+            color: red;
+        }
+
+        .nameBook{
+            font-size: 16px;
+            font-weight: 900;
+        }
+
+        .book {
+            margin-bottom: 20px;
+        }
+
+        .book:nth-child(odd) {
+            background-color: #dddddd;
+        }
+
+
+    </style>
 </head>
 <body>
-    <h1><?php echo($title) ?></h1>
+    <h1 <?= ($red == true) ? 'class="red"' : ''; ?>> <?= ($title) ?> </h1>
     <div>Авторов на портале <Укажите количество авторов></div>
     <!-- Выведите все книги -->
-    <?php 
-        foreach ($library['books'] as $key => $val) {
-
-            $titleBook = $val['title'];
-        
-            $yearOfBirthAutor  = $library['authors'][$val['author']]['birthYear'];
-        
-            $nameAutor = $library['authors'][$val['author']]['name'];
-        
-            $emailAutors = $val['author'];
-        
-            echo "<p>Книга $titleBook, её написал \"" . $nameAutor . ' ' . $yearOfBirthAutor . ' (' . $emailAutors . ') ' . "\"</p>";
-        }
+    <?php foreach ($library['books'] as $key => $val) : {
+        $titleBook = $val['title'];
+        $yearOfBirthAutor  = $library['authors'][$val['author']]['birthYear'];
+        $nameAutor = $library['authors'][$val['author']]['name'];
+        $emailAutors = $val['author'];
+    }
     ?>
+        <p class="book">Книга <span class="nameBook"><?= $titleBook ?></span>, её написал <?= $nameAutor . ' ' . $yearOfBirthAutor ?> (<a href="<?= $emailAutors ?>"><?= $emailAutors ?></a>)</p>
+    <?php endforeach; ?>
+        
 </body>
 </html>
+
